@@ -5,6 +5,7 @@ import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/language-context';
 import Image from 'next/image';
+import { BgAnimation } from './bg-animation';
 
 export function HeroSection() {
   const { language } = useLanguage();
@@ -17,13 +18,14 @@ export function HeroSection() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="rounded-lg bg-card p-8 shadow-lg md:p-12">
             <div className="flex flex-col items-center gap-8 md:flex-row md:items-center">
-              <div className="flex-shrink-0 md:mr-12">
+              <div className="relative flex-shrink-0 md:mr-12">
+                <BgAnimation />
                 <Image
                     src="/avatarSaindo_v3.png"
                     alt={data.name}
                     width={300}
                     height={300}
-                    className="h-72 w-72 object-contain"
+                    className="relative z-10 h-72 w-72 object-contain"
                     priority
                 />
               </div>
