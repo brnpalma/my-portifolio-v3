@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code2, Menu } from 'lucide-react';
+import { Code2 as CodeXml, Menu } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Code2 className="h-6 w-6 text-primary" />
+          <CodeXml className="h-6 w-6 text-primary" />
           <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
         </Link>
         <div className="flex items-center gap-4">
@@ -41,19 +41,19 @@ export function Header() {
               variant={language === 'en' ? 'secondary' : 'ghost'}
               size="icon"
               onClick={() => setLanguage('en')}
-              className="h-8 w-12 rounded-md"
+              className="h-8 w-8 rounded-full"
               aria-label="Switch to English"
             >
-              <USFlagIcon className="h-7 w-10" />
+              <USFlagIcon className="h-8 w-8 rounded-full" />
             </Button>
             <Button
               variant={language === 'pt-br' ? 'secondary' : 'ghost'}
               size="icon"
               onClick={() => setLanguage('pt-br')}
-              className="h-8 w-12 rounded-md"
+              className="h-8 w-8 rounded-full"
               aria-label="Mudar para Português"
             >
-              <BrazilFlagIcon className="h-7 w-10" />
+              <BrazilFlagIcon className="h-8 w-8 rounded-full" />
             </Button>
           </div>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -63,9 +63,9 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="w-[280px]">
               <SheetHeader>
-                <SheetTitle className="sr-only">{mobileMenuTitle}</SheetTitle>
+                <SheetTitle>{mobileMenuTitle}</SheetTitle>
               </SheetHeader>
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
@@ -73,7 +73,7 @@ export function Header() {
                   className="flex items-center gap-2 text-lg font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Code2 className="h-6 w-6 text-primary" />
+                  <CodeXml className="h-6 w-6 text-primary" />
                   <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
                 </Link>
                 {data.navLinks.map(({ href, label }) => (
