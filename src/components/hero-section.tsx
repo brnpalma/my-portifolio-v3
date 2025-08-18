@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/language-context';
+import Image from 'next/image';
 
 export function HeroSection() {
   const { language } = useLanguage();
@@ -16,10 +17,11 @@ export function HeroSection() {
       <div className="container mx-auto max-w-7xl px-4 text-center">
         <div className="flex flex-col items-center space-y-4">
           <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/avatar.png"
               alt={data.name}
+              width={128}
+              height={128}
               className="h-full w-full object-cover"
             />
           </div>
