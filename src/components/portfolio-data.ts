@@ -90,7 +90,7 @@ export const portfolioData = {
       },
     },
     contact: {
-      title: 'Get in Touch',
+      title: 'Contact',
       subtitle: "Feel free to reach out. I'm open to new opportunities and collaborations.",
       email: {
         label: 'Email',
