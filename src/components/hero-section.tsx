@@ -17,11 +17,12 @@ export function HeroSection() {
       <div className="container mx-auto max-w-7xl px-4 text-center">
         <div className="flex flex-col items-center space-y-4">
           <Image
-            src="/avatar.png"
+            src="/avatarSaindo_v3.png"
             alt={data.name}
             width={128}
             height={128}
             className="h-32 w-32 rounded-full object-cover"
+            priority
           />
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             {data.name}
