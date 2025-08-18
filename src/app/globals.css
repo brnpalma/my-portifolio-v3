@@ -12,7 +12,7 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 13%;
+    --background: 0 0% 18%;
     --foreground: 240 10% 98%;
     --card: 0 0% 10%;
     --card-foreground: 240 10% 98%;
@@ -39,7 +39,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 13%;
+    --background: 0 0% 18%;
     --foreground: 240 10% 98%;
     --card: 0 0% 10%;
     --card-foreground: 240 10% 98%;
