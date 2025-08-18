@@ -1,4 +1,19 @@
 import { Github, Linkedin, Briefcase, Phone, Mail, MapPin } from 'lucide-react';
+import { HtmlIcon } from './icons/tech/html-icon';
+import { CssIcon } from './icons/tech/css-icon';
+import { JavascriptIcon } from './icons/tech/javascript-icon';
+import { TypescriptIcon } from './icons/tech/typescript-icon';
+import { ReactIcon } from './icons/tech/react-icon';
+import { NextjsIcon } from './icons/tech/nextjs-icon';
+import { NodejsIcon } from './icons/tech/nodejs-icon';
+import { JavaIcon } from './icons/tech/java-icon';
+import { SpringIcon } from './icons/tech/spring-icon';
+import { MongodbIcon } from './icons/tech/mongodb-icon';
+import { MysqlIcon } from './icons/tech/mysql-icon';
+import { PostgresqlIcon } from './icons/tech/postgresql-icon';
+import { AwsIcon } from './icons/tech/aws-icon';
+import { DockerIcon } from './icons/tech/docker-icon';
+import { GitIcon } from './icons/tech/git-icon';
 
 export const portfolioData = {
   en: {
@@ -6,7 +21,7 @@ export const portfolioData = {
     title: 'Fullstack Developer',
     headerTitle: 'Portfolio',
     bio: "I am a fullstack software developer with expertise in a range of technologies including React, NodeJS, TypeScript, AWS, Java, Spring, and database management. My skills in both frontend and backend development enable me to create robust and efficient solutions. I am committed to continuous learning and staying updated with the latest industry trends. Let's build something amazing together!",
-    contactButton: 'Contact me',
+    contactButton: 'Contact',
     navLinks: [
       { href: '#about', label: 'About' },
       { href: '#experience', label: 'Experience' },
@@ -80,14 +95,25 @@ export const portfolioData = {
       ],
     },
     skills: {
-      title: 'Skills & Competencies',
+      title: 'Skills',
       subtitle: 'The technologies I work with.',
-      categories: {
-        Frontend: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Next.js', 'Styled Components'],
-        Backend: ['Node.js', 'Java', 'Spring Boot', 'Express'],
-        Databases: ['MongoDB', 'MySQL', 'PostgreSQL'],
-        'Cloud & DevOps': ['AWS', 'Docker', 'Git', 'CI/CD'],
-      },
+      items: [
+        { name: 'HTML', icon: HtmlIcon },
+        { name: 'CSS', icon: CssIcon },
+        { name: 'JavaScript', icon: JavascriptIcon },
+        { name: 'TypeScript', icon: TypescriptIcon },
+        { name: 'React', icon: ReactIcon },
+        { name: 'Next.js', icon: NextjsIcon },
+        { name: 'Node.js', icon: NodejsIcon },
+        { name: 'Java', icon: JavaIcon },
+        { name: 'Spring', icon: SpringIcon },
+        { name: 'MongoDB', icon: MongodbIcon },
+        { name: 'MySQL', icon: MysqlIcon },
+        { name: 'PostgreSQL', icon: PostgresqlIcon },
+        { name: 'AWS', icon: AwsIcon },
+        { name: 'Docker', icon: DockerIcon },
+        { name: 'Git', icon: GitIcon },
+      ],
     },
     contact: {
       title: 'Contact',
@@ -188,14 +214,25 @@ export const portfolioData = {
       ],
     },
     skills: {
-      title: 'Habilidades e Competências',
+      title: 'Habilidades',
       subtitle: 'As tecnologias com as quais trabalho.',
-      categories: {
-        Frontend: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Next.js', 'Styled Components'],
-        Backend: ['Node.js', 'Java', 'Spring Boot', 'Express'],
-        Databases: ['MongoDB', 'MySQL', 'PostgreSQL'],
-        'Cloud & DevOps': ['AWS', 'Docker', 'Git', 'CI/CD'],
-      },
+      items: [
+        { name: 'HTML', icon: HtmlIcon },
+        { name: 'CSS', icon: CssIcon },
+        { name: 'JavaScript', icon: JavascriptIcon },
+        { name: 'TypeScript', icon: TypescriptIcon },
+        { name: 'React', icon: ReactIcon },
+        { name: 'Next.js', icon: NextjsIcon },
+        { name: 'Node.js', icon: NodejsIcon },
+        { name: 'Java', icon: JavaIcon },
+        { name: 'Spring', icon: SpringIcon },
+        { name: 'MongoDB', icon: MongodbIcon },
+        { name: 'MySQL', icon: MysqlIcon },
+        { name: 'PostgreSQL', icon: PostgresqlIcon },
+        { name: 'AWS', icon: AwsIcon },
+        { name: 'Docker', icon: DockerIcon },
+        { name: 'Git', icon: GitIcon },
+      ],
     },
     contact: {
       title: 'Contato',
