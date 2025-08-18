@@ -19,7 +19,8 @@ export function HeroSection() {
             <Image
               src="/avatar.png"
               alt={data.name}
-              fill
+              width={128}
+              height={128}
               className="object-cover"
               priority
             />
