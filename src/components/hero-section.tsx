@@ -22,7 +22,7 @@ export function HeroSection() {
                 alt={data.name}
                 width={160}
                 height={160}
-                className="h-40 w-40 object-cover"
+                className="h-40 w-40 object-contain"
                 priority
             />
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
