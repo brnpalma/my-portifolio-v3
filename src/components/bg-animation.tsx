@@ -15,7 +15,7 @@ export function BgAnimation(props: SVGProps<SVGSVGElement>) {
           <stop offset="100%" style={{stopColor: 'hsl(var(--accent))'}} />
         </linearGradient>
       </defs>
-      <g opacity="0.3">
+      <g opacity="0.5">
         {/* Static Dashed Circle */}
         <circle 
           cx="400" 
