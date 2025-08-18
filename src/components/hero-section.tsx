@@ -37,21 +37,28 @@ export function HeroSection() {
                 <p className="max-w-[700px] text-muted-foreground">
                     {data.bio}
                 </p>
-                <div className="flex items-center gap-4 pt-4">
-                    {socials.map((social) => (
-                    <Button
-                        key={social.name}
-                        variant="outline"
-                        size="icon"
-                        asChild
-                        className="hover:bg-foreground hover:text-background"
-                    >
-                        <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                        <social.icon className="h-5 w-5" />
-                        <span className="sr-only">{social.name}</span>
-                        </Link>
+                <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row">
+                    <Button asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90">
+                      <Link href="#contact">
+                        {data.contactButton}
+                      </Link>
                     </Button>
-                    ))}
+                    <div className='flex gap-4'>
+                      {socials.map((social) => (
+                      <Button
+                          key={social.name}
+                          variant="outline"
+                          size="icon"
+                          asChild
+                          className="hover:bg-foreground hover:text-background"
+                      >
+                          <Link href={social.url} target="_blank" rel="noopener noreferrer">
+                          <social.icon className="h-5 w-5" />
+                          <span className="sr-only">{social.name}</span>
+                          </Link>
+                      </Button>
+                      ))}
+                    </div>
                 </div>
               </div>
             </div>

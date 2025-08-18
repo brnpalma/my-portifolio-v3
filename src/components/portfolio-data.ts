@@ -6,11 +6,13 @@ export const portfolioData = {
     title: 'Fullstack Developer',
     headerTitle: 'Portfolio',
     bio: "I am a fullstack software developer with expertise in a range of technologies including React, NodeJS, TypeScript, AWS, Java, Spring, and database management. My skills in both frontend and backend development enable me to create robust and efficient solutions. I am committed to continuous learning and staying updated with the latest industry trends. Let's build something amazing together!",
+    contactButton: 'Contact',
     navLinks: [
       { href: '#about', label: 'About' },
       { href: '#experience', label: 'Experience' },
       { href: '#projects', label: 'Projects' },
       { href: '#skills', label: 'Skills' },
+      { href: '#contact', label: 'Contact' },
     ],
     experience: {
       title: 'Work Experience',
@@ -87,17 +89,35 @@ export const portfolioData = {
         'Cloud & DevOps': ['AWS', 'Docker', 'Git', 'CI/CD'],
       },
     },
+    contact: {
+      title: 'Get in Touch',
+      subtitle: "Feel free to reach out. I'm open to new opportunities and collaborations.",
+      email: {
+        label: 'Email',
+        value: 'bruno.palma.oliveira@gmail.com'
+      },
+      phone: {
+        label: 'Phone',
+        value: '+55 21 98122-0925'
+      },
+      location: {
+        label: 'Location',
+        value: 'Rio de Janeiro, RJ, Brazil'
+      }
+    }
   },
   'pt-br': {
     name: 'Bruno Palma',
     title: 'Desenvolvedor Fullstack',
     headerTitle: 'Portfólio',
     bio: "Sou um desenvolvedor de software fullstack com experiência em uma variedade de tecnologias, incluindo React, NodeJS, TypeScript, AWS, Java, Spring e gerenciamento de banco de dados. Minhas habilidades em desenvolvimento frontend e backend me permitem criar soluções robustas e eficientes. Estou comprometido com o aprendizado contínuo e em me manter atualizado com as últimas tendências do setor. Vamos construir algo incrível juntos!",
+    contactButton: 'Contato',
     navLinks: [
       { href: '#about', label: 'Sobre' },
       { href: '#experience', label: 'Experiência' },
       { href: '#projects', label: 'Projetos' },
       { href: '#skills', label: 'Habilidades' },
+      { href: '#contact', label: 'Contato' },
     ],
     experience: {
       title: 'Experiência Profissional',
@@ -174,6 +194,22 @@ export const portfolioData = {
         'Cloud & DevOps': ['AWS', 'Docker', 'Git', 'CI/CD'],
       },
     },
+    contact: {
+      title: 'Entre em Contato',
+      subtitle: 'Sinta-se à vontade para me procurar. Estou aberto a novas oportunidades e colaborações.',
+      email: {
+        label: 'Email',
+        value: 'bruno.palma.oliveira@gmail.com'
+      },
+      phone: {
+        label: 'Telefone',
+        value: '+55 21 98122-0925'
+      },
+      location: {
+        label: 'Localização',
+        value: 'Rio de Janeiro, RJ, Brasil'
+      }
+    }
   },
   socials: [
     {
@@ -183,7 +219,7 @@ export const portfolioData = {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/bruno-palma-a93232159/',
+      url: 'https://www.linkedin.com/in/bruno-palma-oliveira/',
       icon: Linkedin,
     },
   ],
