@@ -26,7 +26,7 @@ export function ExperienceSection() {
                     index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
                   }`}
                 >
-                  <div className="absolute left-4 z-10 -translate-x-1/2 transform rounded-full bg-primary p-2 text-primary-foreground md:left-1/2">
+                  <div className="absolute left-4 z-10 -translate-x-1/2 transform rounded-full bg-gradient-to-r from-primary to-accent p-2 text-primary-foreground md:left-1/2">
                     <job.icon className="h-5 w-5" />
                   </div>
                   <div

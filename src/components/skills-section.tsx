@@ -27,7 +27,7 @@ export function SkillsSection() {
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {skills.map((skill) => (
-                        <Badge key={skill} variant="default">
+                        <Badge key={skill} variant="default" className="border-transparent bg-gradient-to-r from-primary to-accent text-primary-foreground">
                           {skill}
                         </Badge>
                       ))}
