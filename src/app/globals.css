@@ -12,9 +12,9 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 21%;
+    --background: 0 0% 13%;
     --foreground: 240 10% 98%;
-    --card: 246 22% 16%;
+    --card: 0 0% 10%;
     --card-foreground: 240 10% 98%;
     --popover: 246 22% 13%;
     --popover-foreground: 240 10% 98%;
@@ -39,9 +39,9 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 21%;
+    --background: 0 0% 13%;
     --foreground: 240 10% 98%;
-    --card: 246 22% 16%;
+    --card: 0 0% 10%;
     --card-foreground: 240 10% 98%;
     --popover: 246 22% 13%;
     --popover-foreground: 240 10% 98%;
