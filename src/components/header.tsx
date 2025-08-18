@@ -47,8 +47,7 @@ export function Header() {
             <Link href="/" className="flex items-center gap-2">
             <CodeXml className="h-6 w-6 text-primary" />
             <span className="font-headline text-lg font-bold">
-              <span className="hidden md:inline">{data.headerTitle}</span>
-              <span className="md:hidden">{data.name}</span>
+              {data.headerTitle}
             </span>
             </Link>
             <div className="flex items-center gap-4">

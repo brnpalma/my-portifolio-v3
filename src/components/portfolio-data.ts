@@ -4,7 +4,7 @@ export const portfolioData = {
   en: {
     name: 'Bruno Palma',
     title: 'Fullstack Developer',
-    headerTitle: 'Bruno Palma Portfolio',
+    headerTitle: 'Portfolio',
     bio: "I am a fullstack software developer with expertise in a range of technologies including React, NodeJS, TypeScript, AWS, Java, Spring, and database management. My skills in both frontend and backend development enable me to create robust and efficient solutions. I am committed to continuous learning and staying updated with the latest industry trends. Let's build something amazing together!",
     navLinks: [
       { href: '#about', label: 'About' },
@@ -91,7 +91,7 @@ export const portfolioData = {
   'pt-br': {
     name: 'Bruno Palma',
     title: 'Desenvolvedor Fullstack',
-    headerTitle: 'Portifólio Bruno Palma',
+    headerTitle: 'Portfólio',
     bio: "Sou um desenvolvedor de software fullstack com experiência em uma variedade de tecnologias, incluindo React, NodeJS, TypeScript, AWS, Java, Spring e gerenciamento de banco de dados. Minhas habilidades em desenvolvimento frontend e backend me permitem criar soluções robustas e eficientes. Estou comprometido com o aprendizado contínuo e em me manter atualizado com as últimas tendências do setor. Vamos construir algo incrível juntos!",
     navLinks: [
       { href: '#about', label: 'Sobre' },
