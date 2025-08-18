@@ -18,7 +18,7 @@ export function ExperienceSection() {
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
               <p className="mt-2 text-muted-foreground">{subtitle}</p>
             </div>
-            <div className="relative w-full max-w-3xl p-6 pt-8">
+            <div className="relative w-full max-w-5xl p-6 pt-8">
               <div className="absolute left-4 top-0 h-full w-0.5 -translate-x-1/2 bg-border md:left-1/2"></div>
               {jobs.map((job, index) => (
                 <div

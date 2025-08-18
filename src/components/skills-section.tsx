@@ -17,7 +17,7 @@ export function SkillsSection() {
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
               <p className="mt-2 text-muted-foreground">{subtitle}</p>
             </div>
-            <div className="grid w-full max-w-4xl grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
+            <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
               {items.map(({ name, icon: Icon }) => (
                 <div key={name} className="flex flex-col items-center gap-2">
                   <Icon className="h-16 w-16" />
