@@ -23,8 +23,8 @@ export function ExperienceSection() {
               {jobs.map((job, index) => (
                 <div
                   key={job.company}
-                  className={`relative mb-8 flex w-full items-center md:justify-start ${
-                    index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                  className={`relative mb-8 flex w-full items-center ${
+                    index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
                   }`}
                 >
                   <div className="absolute left-4 z-10 -translate-x-1/2 transform rounded-full bg-gradient-to-r from-primary to-accent p-2 text-primary-foreground md:left-1/2">
@@ -32,10 +32,10 @@ export function ExperienceSection() {
                   </div>
                   <div
                     className={`w-full pl-12 md:w-1/2 ${
-                      index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
+                      index % 2 === 0 ? 'md:pl-8 md:text-left' : 'md:pr-8 md:text-right'
                     }`}
                   >
-                    <Card className="text-left shadow-md md:text-inherit">
+                    <Card className="text-left shadow-md">
                       <CardHeader>
                         <CardTitle>{job.role}</CardTitle>
                         <CardDescription>
