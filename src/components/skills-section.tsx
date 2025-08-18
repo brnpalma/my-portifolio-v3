@@ -1,3 +1,4 @@
+
 'use client';
 
 import { portfolioData } from './portfolio-data';
@@ -10,7 +11,7 @@ export function SkillsSection() {
   return (
     <section id="skills" className="w-full py-8">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="rounded-lg bg-card p-8 text-center shadow-lg md:p-12">
+        <div className="rounded-lg bg-card p-6 text-center shadow-lg md:p-8">
           <div className="flex flex-col items-center space-y-8">
             <div className="text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
