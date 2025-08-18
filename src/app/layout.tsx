@@ -3,7 +3,7 @@ import './globals.css';
 import { LanguageProvider } from '@/contexts/language-context';
 
 export const metadata: Metadata = {
-  title: 'PortfolioPilot',
+  title: 'Portifólio Bruno Palma',
   description: 'A portfolio website built with Next.js and Firebase Studio.',
 };
 

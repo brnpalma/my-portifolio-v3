@@ -22,6 +22,7 @@ export function HeroSection() {
               width={128}
               height={128}
               className="rounded-full object-cover"
+              priority
             />
           </div>
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
