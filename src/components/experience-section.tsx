@@ -9,15 +9,15 @@ export function ExperienceSection() {
   const { title, subtitle, jobs } = portfolioData[language].experience;
 
   return (
-    <section id="experience" className="w-full bg-secondary py-8">
+    <section id="experience" className="w-full py-8">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="flex flex-col items-center space-y-8">
-          <div className="text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
-            <p className="mt-2 text-muted-foreground">{subtitle}</p>
-          </div>
-          <Card className="w-full max-w-3xl">
-            <CardContent className="relative p-6 pt-8">
+        <div className="rounded-lg bg-card p-8 text-center shadow-lg md:p-12">
+          <div className="flex flex-col items-center space-y-8">
+            <div className="text-center">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
+              <p className="mt-2 text-muted-foreground">{subtitle}</p>
+            </div>
+            <div className="relative w-full max-w-3xl p-6 pt-8">
               <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border"></div>
               {jobs.map((job, index) => (
                 <div
@@ -48,8 +48,8 @@ export function ExperienceSection() {
                   </div>
                 </div>
               ))}
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
