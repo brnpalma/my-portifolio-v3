@@ -94,15 +94,15 @@ export const portfolioData = {
       subtitle: "Feel free to reach out. I'm open to new opportunities and collaborations.",
       email: {
         label: 'Email',
-        value: 'bruno.palma.oliveira@gmail.com'
+        value: 'br88@outlook.com'
       },
       phone: {
         label: 'Phone',
-        value: '+55 21 98122-0925'
+        value: '+55 11 99100-5698'
       },
       location: {
         label: 'Location',
-        value: 'Rio de Janeiro, RJ, Brazil'
+        value: 'São Paulo, SP, Brazil'
       }
     }
   },
@@ -199,15 +199,15 @@ export const portfolioData = {
       subtitle: 'Sinta-se à vontade para me procurar. Estou aberto a novas oportunidades e colaborações.',
       email: {
         label: 'Email',
-        value: 'bruno.palma.oliveira@gmail.com'
+        value: 'br88@outlook.com'
       },
       phone: {
         label: 'Telefone',
-        value: '+55 21 98122-0925'
+        value: '+55 11 99100-5698'
       },
       location: {
         label: 'Localização',
-        value: 'Rio de Janeiro, RJ, Brasil'
+        value: 'São Paulo, SP, Brasil'
       }
     }
   },
