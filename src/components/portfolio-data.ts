@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Briefcase, Phone, Mail, MapPin } from 'lucide-react';
 
 export const portfolioData = {
   en: {
@@ -6,7 +6,7 @@ export const portfolioData = {
     title: 'Fullstack Developer',
     headerTitle: 'Portfolio',
     bio: "I am a fullstack software developer with expertise in a range of technologies including React, NodeJS, TypeScript, AWS, Java, Spring, and database management. My skills in both frontend and backend development enable me to create robust and efficient solutions. I am committed to continuous learning and staying updated with the latest industry trends. Let's build something amazing together!",
-    contactButton: 'Contact',
+    contactButton: 'Contact me',
     navLinks: [
       { href: '#about', label: 'About' },
       { href: '#experience', label: 'Experience' },
@@ -94,15 +94,18 @@ export const portfolioData = {
       subtitle: "Feel free to reach out. I'm open to new opportunities and collaborations.",
       email: {
         label: 'Email',
-        value: 'br88@outlook.com'
+        value: 'br88@outlook.com',
+        icon: Mail,
       },
       phone: {
         label: 'Phone',
-        value: '+55 11 99100-5698'
+        value: '+55 11 99100-5698',
+        icon: Phone,
       },
       location: {
         label: 'Location',
-        value: 'São Paulo, SP, Brazil'
+        value: 'São Paulo, SP, Brazil',
+        icon: MapPin,
       }
     }
   },
@@ -199,15 +202,18 @@ export const portfolioData = {
       subtitle: 'Sinta-se à vontade para me procurar. Estou aberto a novas oportunidades e colaborações.',
       email: {
         label: 'Email',
-        value: 'br88@outlook.com'
+        value: 'br88@outlook.com',
+        icon: Mail,
       },
       phone: {
         label: 'Telefone',
-        value: '+55 11 99100-5698'
+        value: '+55 11 99100-5698',
+        icon: Phone,
       },
       location: {
         label: 'Localização',
-        value: 'São Paulo, SP, Brasil'
+        value: 'São Paulo, SP, Brasil',
+        icon: MapPin,
       }
     }
   },
