@@ -16,7 +16,7 @@ export function HeroSection() {
     <section id="about" className="w-full py-8">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="rounded-lg bg-card p-8 shadow-lg md:p-12">
-            <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+            <div className="flex flex-col items-center gap-8 md:flex-row md:items-center">
               <div className="flex-shrink-0 md:mr-12">
                 <Image
                     src="/avatarSaindo_v3.png"
