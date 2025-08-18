@@ -20,7 +20,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Code2 className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-bold">Portifólio Bruno Palma</span>
+          <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
         </Link>
         <div className="flex items-center gap-4">
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -69,7 +69,7 @@ export function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Code2 className="h-6 w-6 text-primary" />
-                  <span className="font-headline text-lg font-bold">Portifólio Bruno Palma</span>
+                  <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
                 </Link>
                 {data.navLinks.map(({ href, label }) => (
                   <Link
