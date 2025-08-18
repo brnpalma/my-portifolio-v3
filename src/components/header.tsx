@@ -5,6 +5,8 @@ import { Code2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
+import { BrazilFlagIcon } from './icons/brazil-flag-icon';
+import { USFlagIcon } from './icons/us-flag-icon';
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
@@ -32,17 +34,21 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Button
               variant={language === 'en' ? 'secondary' : 'ghost'}
-              size="sm"
+              size="icon"
               onClick={() => setLanguage('en')}
+              className="h-8 w-11 rounded-md"
+              aria-label="Switch to English"
             >
-              EN
+              <USFlagIcon className="h-6 w-9" />
             </Button>
             <Button
               variant={language === 'pt-br' ? 'secondary' : 'ghost'}
-              size="sm"
+              size="icon"
               onClick={() => setLanguage('pt-br')}
+              className="h-8 w-11 rounded-md"
+              aria-label="Mudar para Português"
             >
-              PT-BR
+              <BrazilFlagIcon className="h-6 w-9" />
             </Button>
           </div>
         </div>
