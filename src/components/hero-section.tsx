@@ -12,7 +12,8 @@ export function HeroSection() {
             <Image
               src="/avatar.png"
               alt="Bruno Palma"
-              fill
+              width={128}
+              height={128}
               className="rounded-full object-cover"
             />
           </div>
