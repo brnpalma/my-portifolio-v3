@@ -39,7 +39,13 @@ export function HeroSection() {
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                     {socials.map((social) => (
-                    <Button key={social.name} variant="outline" size="icon" asChild>
+                    <Button
+                        key={social.name}
+                        variant="outline"
+                        size="icon"
+                        asChild
+                        className="hover:bg-foreground hover:text-background"
+                    >
                         <Link href={social.url} target="_blank" rel="noopener noreferrer">
                         <social.icon className="h-5 w-5" />
                         <span className="sr-only">{social.name}</span>
