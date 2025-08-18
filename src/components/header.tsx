@@ -46,7 +46,10 @@ export function Header() {
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between rounded-lg bg-card px-4 shadow-lg sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2">
             <CodeXml className="h-6 w-6 text-primary" />
-            <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
+            <span className="font-headline text-lg font-bold">
+              <span className="hidden md:inline">{data.headerTitle}</span>
+              <span className="md:hidden">{data.name}</span>
+            </span>
             </Link>
             <div className="flex items-center gap-4">
             <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -103,7 +106,7 @@ export function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     >
                     <CodeXml className="h-6 w-6 text-primary" />
-                    <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
+                    <span className="font-headline text-lg font-bold">{data.name}</span>
                     </Link>
                     {data.navLinks.map(({ href, label }) => (
                     <Link
