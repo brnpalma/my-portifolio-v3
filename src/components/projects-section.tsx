@@ -10,7 +10,7 @@ export function ProjectsSection() {
   const { title, subtitle, items } = portfolioData[language].projects;
   
   return (
-    <section id="projects" className="w-full py-20 md:py-32">
+    <section id="projects" className="w-full py-8">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col items-center space-y-8">
           <div className="text-center">

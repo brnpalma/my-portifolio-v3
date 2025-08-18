@@ -13,7 +13,7 @@ export function HeroSection() {
 
   
   return (
-    <section id="about" className="w-full py-20 md:py-32 lg:py-40">
+    <section id="about" className="w-full py-8">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="rounded-lg bg-card p-8 text-center shadow-lg md:p-12">
             <div className="flex flex-col items-center space-y-4">
