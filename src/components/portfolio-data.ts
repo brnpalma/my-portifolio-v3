@@ -198,7 +198,7 @@ export const portfolioData = {
       },
     },
     contact: {
-      title: 'Entre em Contato',
+      title: 'Contato',
       subtitle: 'Sinta-se à vontade para me procurar. Estou aberto a novas oportunidades e colaborações.',
       email: {
         label: 'Email',
