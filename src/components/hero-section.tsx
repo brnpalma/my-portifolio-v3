@@ -10,7 +10,7 @@ export function HeroSection() {
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             {portfolioData.name}
           </h1>
-          <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl">
+          <p className="max-w-[700px] bg-gradient-to-r from-primary to-accent bg-clip-text text-lg text-transparent md:text-xl">
             {portfolioData.title}
           </p>
           <p className="max-w-[700px] text-muted-foreground">
