@@ -2,12 +2,12 @@ import type { SVGProps } from 'react';
 
 export function ReactIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-      <circle cx="12" cy="12" r="2.5" fill="#61DAFB"/>
-      <g fill="none" stroke="#61DAFB" strokeWidth="1">
-        <ellipse cx="12" cy="12" rx="11" ry="4.2"/>
-        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/>
-        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23 23 20.46" {...props}>
+      <circle r="2.05" fill="#61dafb" />
+      <g stroke="#61dafb" strokeWidth="1" fill="none">
+        <ellipse rx="11" ry="4.2" />
+        <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+        <ellipse rx="11" ry="4.2" transform="rotate(120)" />
       </g>
     </svg>
   );
