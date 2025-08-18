@@ -65,7 +65,7 @@ export function Header() {
 
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="flex items-center gap-2 px-3">
+                <Button variant="outline" className="flex items-center gap-2 px-3 hover:bg-foreground hover:text-background">
                     <CurrentLanguageIcon className="h-6 w-6 rounded-full" />
                     <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </Button>
@@ -89,7 +89,7 @@ export function Header() {
 
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden">
+                <Button variant="outline" size="icon" className="md:hidden hover:bg-foreground hover:text-background">
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Open menu</span>
                 </Button>
