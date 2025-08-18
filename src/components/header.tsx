@@ -75,7 +75,7 @@ export function Header() {
                     <DropdownMenuItem
                     key={option.code}
                     onClick={() => setLanguage(option.code)}
-                    className="flex cursor-pointer items-center justify-between gap-2"
+                    className="flex cursor-pointer items-center justify-between gap-2 focus:bg-foreground focus:text-background"
                     >
                     <div className="flex items-center gap-2">
                         <option.Icon />
