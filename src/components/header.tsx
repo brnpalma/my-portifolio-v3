@@ -42,84 +42,84 @@ export function Header() {
 
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <CodeXml className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
-        </Link>
-        <div className="flex items-center gap-4">
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            {data.navLinks.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                className="transition-colors hover:text-primary"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="flex items-center gap-2 px-3">
-                <CurrentLanguageIcon className="h-6 w-6 rounded-full" />
-                <ChevronDown className="h-4 w-4 text-muted-foreground" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {languageOptions.map((option) => (
-                <DropdownMenuItem
-                  key={option.code}
-                  onClick={() => setLanguage(option.code)}
-                  className="flex cursor-pointer items-center justify-between gap-2"
-                >
-                  <div className="flex items-center gap-2">
-                    <option.Icon />
-                    <span>{option.label}</span>
-                  </div>
-                  {language === option.code && <Check className="h-4 w-4 text-primary" />}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[280px]">
-              <SheetHeader>
-                <SheetTitle>{mobileMenuTitle}</SheetTitle>
-              </SheetHeader>
-              <nav className="grid gap-6 text-lg font-medium">
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 text-lg font-semibold"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <CodeXml className="h-6 w-6 text-primary" />
-                  <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
-                </Link>
+    <header className="sticky top-0 z-50 w-full p-4">
+        <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between rounded-lg bg-card px-4 shadow-lg sm:px-6 lg:px-8">
+            <Link href="/" className="flex items-center gap-2">
+            <CodeXml className="h-6 w-6 text-primary" />
+            <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
+            </Link>
+            <div className="flex items-center gap-4">
+            <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
                 {data.navLinks.map(({ href, label }) => (
-                  <Link
+                <Link
                     key={label}
                     href={href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
+                    className="transition-colors hover:text-primary"
+                >
                     {label}
-                  </Link>
+                </Link>
                 ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+            </nav>
+
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="flex items-center gap-2 px-3">
+                    <CurrentLanguageIcon className="h-6 w-6 rounded-full" />
+                    <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                {languageOptions.map((option) => (
+                    <DropdownMenuItem
+                    key={option.code}
+                    onClick={() => setLanguage(option.code)}
+                    className="flex cursor-pointer items-center justify-between gap-2"
+                    >
+                    <div className="flex items-center gap-2">
+                        <option.Icon />
+                        <span>{option.label}</span>
+                    </div>
+                    {language === option.code && <Check className="h-4 w-4 text-primary" />}
+                    </DropdownMenuItem>
+                ))}
+                </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="md:hidden">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Open menu</span>
+                </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[280px]">
+                <SheetHeader>
+                    <SheetTitle>{mobileMenuTitle}</SheetTitle>
+                </SheetHeader>
+                <nav className="grid gap-6 text-lg font-medium">
+                    <Link
+                    href="/"
+                    className="flex items-center gap-2 text-lg font-semibold"
+                    onClick={() => setIsMenuOpen(false)}
+                    >
+                    <CodeXml className="h-6 w-6 text-primary" />
+                    <span className="font-headline text-lg font-bold">{data.headerTitle}</span>
+                    </Link>
+                    {data.navLinks.map(({ href, label }) => (
+                    <Link
+                        key={label}
+                        href={href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                        {label}
+                    </Link>
+                    ))}
+                </nav>
+                </SheetContent>
+            </Sheet>
+            </div>
         </div>
-      </div>
     </header>
   );
 }
