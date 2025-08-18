@@ -10,6 +10,7 @@ export function HeroSection() {
   const data = portfolioData[language];
   const socials = portfolioData.socials;
 
+  
   return (
     <section id="about" className="w-full py-20 md:py-32 lg:py-40">
       <div className="container mx-auto max-w-7xl px-4 text-center">
