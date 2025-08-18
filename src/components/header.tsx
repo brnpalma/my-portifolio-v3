@@ -8,12 +8,14 @@ import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
 import { BrazilFlagIcon } from './icons/brazil-flag-icon';
 import { USFlagIcon } from './icons/us-flag-icon';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from './ui/sheet';
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
   const data = portfolioData[language];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const mobileMenuTitle = language === 'en' ? 'Menu' : 'Menu';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -62,6 +64,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetHeader>
+                <SheetTitle className="sr-only">{mobileMenuTitle}</SheetTitle>
+              </SheetHeader>
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
                   href="/"
