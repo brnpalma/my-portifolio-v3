@@ -2,13 +2,21 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code2 as CodeXml, Menu } from 'lucide-react';
+import { Code2 as CodeXml, Menu, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
 import { BrazilFlagIcon } from './icons/brazil-flag-icon';
 import { USFlagIcon } from './icons/us-flag-icon';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from './ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu';
+import { cn } from '@/lib/utils';
+
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
@@ -16,6 +24,22 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mobileMenuTitle = language === 'en' ? 'Menu' : 'Menu';
+
+  const languageOptions = [
+    {
+      code: 'en' as const,
+      label: 'English',
+      Icon: ({ className }: { className?: string }) => <USFlagIcon className={cn("h-5 w-5", className)} />,
+    },
+    {
+      code: 'pt-br' as const,
+      label: 'Português (Brasil)',
+      Icon: ({ className }: { className?: string }) => <BrazilFlagIcon className={cn("h-5 w-5", className)} />,
+    },
+  ];
+
+  const CurrentLanguageIcon = languageOptions.find(opt => opt.code === language)!.Icon;
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,26 +60,31 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-2">
-            <Button
-              variant={language === 'en' ? 'secondary' : 'ghost'}
-              size="icon"
-              onClick={() => setLanguage('en')}
-              className="h-8 w-8 rounded-full"
-              aria-label="Switch to English"
-            >
-              <USFlagIcon className="h-8 w-8 rounded-full" />
-            </Button>
-            <Button
-              variant={language === 'pt-br' ? 'secondary' : 'ghost'}
-              size="icon"
-              onClick={() => setLanguage('pt-br')}
-              className="h-8 w-8 rounded-full"
-              aria-label="Mudar para Português"
-            >
-              <BrazilFlagIcon className="h-8 w-8 rounded-full" />
-            </Button>
-          </div>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" className="flex items-center gap-2 px-3">
+                <CurrentLanguageIcon className="h-6 w-6 rounded-full" />
+                <ChevronDown className="h-4 w-4 text-muted-foreground" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {languageOptions.map((option) => (
+                <DropdownMenuItem
+                  key={option.code}
+                  onClick={() => setLanguage(option.code)}
+                  className="flex cursor-pointer items-center justify-between gap-2"
+                >
+                  <div className="flex items-center gap-2">
+                    <option.Icon />
+                    <span>{option.label}</span>
+                  </div>
+                  {language === option.code && <Check className="h-4 w-4 text-primary" />}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
