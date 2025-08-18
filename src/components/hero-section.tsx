@@ -19,9 +19,9 @@ export function HeroSection() {
           <Image
             src="/avatarSaindo_v3.png"
             alt={data.name}
-            width={128}
-            height={128}
-            className="h-32 w-32 rounded-full object-cover"
+            width={160}
+            height={160}
+            className="h-40 w-40 object-cover"
             priority
           />
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
