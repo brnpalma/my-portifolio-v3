@@ -27,7 +27,7 @@ export function HeroSection() {
                     priority
                 />
               </div>
-              <div className="flex flex-grow flex-col items-center space-y-4 text-center md:items-start md:text-left">
+              <div className="flex flex-grow flex-col items-center space-y-4 text-center">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                     {data.name}
                 </h1>
