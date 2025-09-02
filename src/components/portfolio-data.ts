@@ -1,4 +1,5 @@
-import { Github, Linkedin, Briefcase, Phone, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Briefcase, Mail, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from './icons/whatsapp-icon';
 
 export const portfolioData = {
   en: {
@@ -104,7 +105,7 @@ export const portfolioData = {
       phone: {
         label: 'Phone',
         value: '+55 11 99100-5698',
-        icon: Phone,
+        icon: WhatsAppIcon,
       },
       location: {
         label: 'Location',
@@ -216,7 +217,7 @@ export const portfolioData = {
       phone: {
         label: 'Telefone',
         value: '+55 11 99100-5698',
-        icon: Phone,
+        icon: WhatsAppIcon,
       },
       location: {
         label: 'Localização',

@@ -11,11 +11,13 @@ export function ContactSection() {
   const contactData = portfolioData[language].contact;
   const socials = portfolioData.socials;
 
+  const phoneNumber = contactData.phone.value.replace(/\D/g, '');
+
   const contactItems = [
     {
       Icon: contactData.phone.icon,
       value: contactData.phone.value,
-      href: `tel:${contactData.phone.value.replace(/\s/g, '')}`,
+      href: `https://wa.me/${phoneNumber}?text=Olá!`,
     },
     {
       Icon: contactData.email.icon,
@@ -46,7 +48,7 @@ export function ContactSection() {
                       <Icon className="h-5 w-5" />
                     </div>
                     {href ? (
-                      <a href={href} className="text-muted-foreground hover:text-primary">
+                      <a href={href} className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
                         {value}
                       </a>
                     ) : (
