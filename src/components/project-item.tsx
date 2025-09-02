@@ -43,12 +43,12 @@ export function ProjectItem({ project }: { project: Project }) {
         <p className="mt-4 text-muted-foreground">{currentDescription}</p>
         <div className="mt-6 flex gap-4">
           <Button variant="outline" asChild className="hover:bg-foreground hover:text-background">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href={project.appUrl} target="_blank" rel="noopener noreferrer">
               {viewProjectText} <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" /> {repositoryText}
             </a>
           </Button>
