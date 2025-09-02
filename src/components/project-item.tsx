@@ -27,7 +27,7 @@ export function ProjectItem({ project }: { project: Project }) {
           src={project.imageUrl}
           alt={project.title}
           fill
-          className="rounded-lg object-cover"
+          className="rounded-lg object-contain"
           data-ai-hint={project.imageHint}
         />
       </div>
