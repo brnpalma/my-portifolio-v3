@@ -6,7 +6,7 @@ export const portfolioData = {
     name: 'Bruno Palma',
     title: 'Fullstack Developer',
     headerTitle: 'Portfolio',
-    bio: "I am a fullstack software developer with expertise in a range of technologies including React, NodeJS, TypeScript, AWS, Java, Spring, and database management. My skills in both frontend and backend development enable me to create robust and efficient solutions. I am committed to continuous learning and staying updated with the latest industry trends. Let's build something amazing together!",
+    bio: "Full Stack Developer passionate about transforming ideas into innovative, high-performance, and efficient digital solutions. Solid experience across the entire software development lifecycle, from requirements analysis to implementation and support. Mastery of C#, Asp.Net, Javascript, HTML, CSS, SQL, Python, Dart, among others, combined with proficiency in Azure tools and platforms (Service Bus, Blob Storage, Functions, Devops) and Docker. A proactive, punctual, committed, and flexible professional with strong teamwork skills and excellent command of programming logic. Always up-to-date with the latest trends in AI and emerging technologies that add value and deliver better results.",
     contactButton: 'Contact',
     navLinks: [
       { href: '#about', label: 'About' },
@@ -118,7 +118,7 @@ export const portfolioData = {
     name: 'Bruno Palma',
     title: 'Desenvolvedor Fullstack',
     headerTitle: 'Portfólio',
-    bio: "Sou um desenvolvedor de software fullstack com experiência em uma variedade de tecnologias, incluindo React, NodeJS, TypeScript, AWS, Java, Spring e gerenciamento de banco de dados. Minhas habilidades em desenvolvimento frontend e backend me permitem criar soluções robustas e eficientes. Estou comprometido com o aprendizado contínuo e em me manter atualizado com as últimas tendências do setor. Vamos construir algo incrível juntos!",
+    bio: "Desenvolvedor Full Stack apaixonado por transformar ideias em soluções digitais inovadoras, performáticas e eficientes. Experiência sólida em todo o ciclo do desenvolvimento de software, desde a análise de requisitos até implementação e sustentação. Domínio em C#, Asp.Net, Javascript, HTML, CSS, SQL, Python, Dart, entre outras, aliado a proficiência em ferramentas e plataformas Azure (Service Bus, Blob Storage, Functions, Devops) e Docker. Um profissional proativo, pontual, compromissado, flexível, com boas relações de trabalho em equipe e ótimo domínio em lógica de programação. Sempre atualizado com as últimas tendencias em IA e tecnologias emergentes que agreguem valores e melhores resultados.",
     contactButton: 'Contato',
     navLinks: [
       { href: '#about', label: 'Sobre' },
