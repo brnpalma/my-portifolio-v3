@@ -237,5 +237,10 @@ export const portfolioData = {
       url: 'https://www.linkedin.com/in/bruno-palma-oliveira/',
       icon: Linkedin,
     },
+    {
+      name: 'WhatsApp',
+      url: 'https://wa.me/5511991005698',
+      icon: WhatsAppIcon,
+    },
   ],
 };
