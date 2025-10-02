@@ -198,7 +198,11 @@ const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  const { scrollPrev, canScrollPrev } = useCarousel()
+
+  if (!canScrollPrev) {
+    return null
+  }
 
   return (
     <Button
@@ -206,13 +210,9 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 rounded-full bg-background/50 text-foreground/80 hover:bg-background/80 hover:text-foreground",
-        orientation === "horizontal"
-          ? "left-4 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+        'absolute h-8 w-8 rounded-full bg-background/50 text-foreground/80 hover:bg-background/80 hover:text-foreground left-4 top-1/2 -translate-y-1/2 z-10',
         className
       )}
-      disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
@@ -227,7 +227,11 @@ const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const { scrollNext, canScrollNext } = useCarousel()
+
+  if (!canScrollNext) {
+    return null
+  }
 
   return (
     <Button
@@ -235,13 +239,9 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 rounded-full bg-background/50 text-foreground/80 hover:bg-background/80 hover:text-foreground",
-        orientation === "horizontal"
-          ? "right-4 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+        'absolute h-8 w-8 rounded-full bg-background/50 text-foreground/80 hover:bg-background/80 hover:text-foreground right-4 top-1/2 -translate-y-1/2 z-10',
         className
       )}
-      disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
