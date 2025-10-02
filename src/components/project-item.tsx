@@ -15,7 +15,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 type Project = (typeof portfolioData.en.projects.items)[0];
 
@@ -54,6 +61,12 @@ export function ProjectItem({ project }: { project: Project }) {
                     </div>
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-0">
+                    <DialogHeader className="sr-only">
+                      <DialogTitle>{`${project.title} - Image ${index + 1}`}</DialogTitle>
+                      <DialogDescription>
+                        Enlarged image of the project: {project.title}.
+                      </DialogDescription>
+                    </DialogHeader>
                     <Image
                       src={url}
                       alt={`${project.title} - Imagem ${index + 1}`}
