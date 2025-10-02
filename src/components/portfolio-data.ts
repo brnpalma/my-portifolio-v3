@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Briefcase, Mail, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
 
@@ -67,9 +68,14 @@ export const portfolioData = {
         { name: 'MongoDB' },
         { name: 'MySQL' },
         { name: 'Micro-serviços' },
-        { name: 'AWS' },
-        { name: 'Docker' },
-        { name: 'Git' },
+        { name: 'DevOps' },
+        { name: 'Dart' },
+        { name: 'Flutter' },
+        { name: 'ASP.net' },
+        { name: 'Python' },
+        { name: 'C#' },
+        { name: 'SQL Server' },
+        { name: 'Win Forms' },
       ],
     },
     contact: {
@@ -157,9 +163,14 @@ export const portfolioData = {
         { name: 'MongoDB' },
         { name: 'MySQL' },
         { name: 'Micro-serviços' },
-        { name: 'AWS' },
-        { name: 'Docker' },
-        { name: 'Git' },
+        { name: 'DevOps' },
+        { name: 'Dart' },
+        { name: 'Flutter' },
+        { name: 'ASP.net' },
+        { name: 'Python' },
+        { name: 'C#' },
+        { name: 'SQL Server' },
+        { name: 'Win Forms' },
       ],
     },
     contact: {
