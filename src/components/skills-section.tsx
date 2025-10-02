@@ -3,7 +3,7 @@
 
 import { portfolioData } from './portfolio-data';
 import { useLanguage } from '@/contexts/language-context';
-import { Badge } from './ui/badge';
+import { Badge } from '@/components/badge';
 
 export function SkillsSection() {
   const { language } = useLanguage();
@@ -20,7 +20,7 @@ export function SkillsSection() {
             </div>
             <div className="flex w-full max-w-5xl flex-wrap justify-center gap-4">
               {items.map(({ name }) => (
-                <Badge key={name} variant="secondary" className="px-4 py-2 text-base">
+                <Badge key={name} variant="gradient" className="px-4 py-2 text-base">
                   {name}
                 </Badge>
               ))}

@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/badge';
 import { ArrowUpRight, Github, Search, WandSparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
@@ -78,19 +78,19 @@ export function ProjectItem({ project }: { project: Project }) {
         <div className="flex flex-col justify-center text-left md:w-1/2">
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
+              <Badge key={tag} variant="gradient">
                 {tag}
               </Badge>
             ))}
           </div>
           <p className="mt-4 text-muted-foreground">{currentDescription}</p>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-            <Button variant="outline" asChild className="hover:bg-foreground hover:text-background">
+            <Button asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90">
               <a href={project.appUrl} target="_blank" rel="noopener noreferrer">
                 {viewProjectText} <ArrowUpRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button variant="secondary" asChild>
+            <Button asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90">
               <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" /> {repositoryText}
               </a>
@@ -103,12 +103,12 @@ export function ProjectItem({ project }: { project: Project }) {
           <DialogOverlay />
           <DialogContent className="flex h-auto max-h-[90vh] w-auto max-w-[90vw] items-center justify-center border-none bg-transparent p-0 shadow-none">
           <DialogHeader className="sr-only">
-              <DialogTitle>Imagem do Projeto</DialogTitle>
-              <DialogDescription>Imagem ampliada do projeto {project.title}.</DialogDescription>
+              <DialogTitle>Project Image</DialogTitle>
+              <DialogDescription>Enlarged image of the {project.title} project.</DialogDescription>
             </DialogHeader>
             <Image
               src={selectedImage}
-              alt={`Imagem ampliada do projeto`}
+              alt={`Enlarged project image`}
               width={1600}
               height={900}
               className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
