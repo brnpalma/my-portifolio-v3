@@ -22,12 +22,13 @@ export function ProjectItem({ project }: { project: Project }) {
 
   return (
     <div className="flex flex-col gap-8 md:flex-row">
-      <div className="relative h-60 w-full flex-shrink-0 md:h-auto md:w-1/2">
+      <div className="relative w-full flex-shrink-0 md:w-1/2">
         <Image
           src={project.imageUrl}
           alt={project.title}
-          fill
-          className="rounded-lg object-contain"
+          width={600}
+          height={400}
+          className="h-auto w-full rounded-lg object-contain"
           data-ai-hint={project.imageHint}
         />
       </div>
