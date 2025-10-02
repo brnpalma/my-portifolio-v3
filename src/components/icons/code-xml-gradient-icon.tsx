@@ -30,6 +30,13 @@ export function CodeXmlGradientIcon(props: SVGProps<SVGSVGElement>) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+      <path
+        d="m14.5 4-5 16"
+        stroke="url(#grad)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
