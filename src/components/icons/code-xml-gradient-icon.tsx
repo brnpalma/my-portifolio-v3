@@ -17,21 +17,14 @@ export function CodeXmlGradientIcon(props: SVGProps<SVGSVGElement>) {
         </linearGradient>
       </defs>
       <path
-        d="M10 10l-4 4 4 4"
+        d="m16 18 6-6-6-6"
         stroke="url(#grad)"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M14 10l4 4-4 4"
-        stroke="url(#grad)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M18 6L6 18"
+        d="m8 6-6 6 6 6"
         stroke="url(#grad)"
         strokeWidth="2"
         strokeLinecap="round"
