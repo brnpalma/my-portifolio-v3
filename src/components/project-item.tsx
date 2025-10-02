@@ -42,7 +42,7 @@ export function ProjectItem({ project }: { project: Project }) {
           ))}
         </div>
         <p className="mt-4 text-muted-foreground">{currentDescription}</p>
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex flex-col gap-4 sm:flex-row">
           <Button variant="outline" asChild className="hover:bg-foreground hover:text-background">
             <a href={project.appUrl} target="_blank" rel="noopener noreferrer">
               {viewProjectText} <ArrowUpRight className="ml-2 h-4 w-4" />
