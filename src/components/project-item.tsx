@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, Search } from 'lucide-react';
+import { ArrowUpRight, Github, Search, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
 import {
@@ -22,6 +22,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
+  DialogPortal,
+  DialogOverlay
 } from '@/components/ui/dialog';
 
 type Project = (typeof portfolioData.en.projects.items)[0];
@@ -29,12 +32,20 @@ type Project = (typeof portfolioData.en.projects.items)[0];
 export function ProjectItem({ project }: { project: Project }) {
   const { language } = useLanguage();
   const [description, setDescription] = useState(project.description);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
 
   const translatedProject = portfolioData[language].projects.items.find(p => p.id === project.id);
   const currentDescription = language === 'en' ? description : (translatedProject?.description || description);
 
   const viewProjectText = language === 'en' ? 'View Project' : 'Ver Projeto';
   const repositoryText = language === 'en' ? 'Repository' : 'Repositório';
+
+  const handleImageClick = (url: string) => {
+    setSelectedImage(url);
+    setIsDialogOpen(true);
+  };
 
   return (
     <div className="flex flex-col gap-8 md:flex-row">
@@ -43,44 +54,25 @@ export function ProjectItem({ project }: { project: Project }) {
           <CarouselContent>
             {project.imageUrls.map((url, index) => (
               <CarouselItem key={index}>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div className="group relative aspect-video cursor-pointer overflow-hidden rounded-lg">
-                      <Image
-                        src={url}
-                        alt={`${project.title} - Imagem ${index + 1}`}
-                        width={600}
-                        height={400}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={project.imageHint}
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <Search className="h-12 w-12 text-white" />
-                      </div>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl p-0">
-                    <DialogHeader className="sr-only">
-                      <DialogTitle>{`${project.title} - Image ${index + 1}`}</DialogTitle>
-                      <DialogDescription>
-                        Enlarged image of the project: {project.title}.
-                      </DialogDescription>
-                    </DialogHeader>
+                  <div className="group relative aspect-video cursor-pointer overflow-hidden rounded-lg" onClick={() => handleImageClick(url)}>
                     <Image
                       src={url}
                       alt={`${project.title} - Imagem ${index + 1}`}
-                      width={1200}
-                      height={800}
-                      className="h-auto w-full rounded-lg object-contain"
+                      width={600}
+                      height={400}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={project.imageHint}
                     />
-                  </DialogContent>
-                </Dialog>
+                    <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <Search className="h-12 w-12 text-white" />
+                    </div>
+                  </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
       <div className="flex flex-col justify-center text-left md:w-1/2">
@@ -106,6 +98,30 @@ export function ProjectItem({ project }: { project: Project }) {
           </Button>
         </div>
       </div>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogPortal>
+          <DialogOverlay />
+          <DialogContent className="max-w-4xl p-0">
+            <Image
+              src={selectedImage}
+              alt={`Imagem ampliada do projeto`}
+              width={1200}
+              height={800}
+              className="h-auto w-full rounded-lg object-contain"
+            />
+             <DialogHeader className="sr-only">
+              <DialogTitle>Imagem do Projeto</DialogTitle>
+              <DialogDescription>
+                Imagem ampliada do projeto.
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+          <DialogClose className="absolute right-4 top-4 z-[60] rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <X className="h-4 w-4 text-white bg-black rounded-sm" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+        </DialogPortal>
+      </Dialog>
     </div>
   );
 }
