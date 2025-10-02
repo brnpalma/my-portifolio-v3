@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code2 as CodeXml, Menu, ChevronDown, Check } from 'lucide-react';
+import { Menu, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { portfolioData } from './portfolio-data';
 import { Button } from './ui/button';
@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 import { cn } from '@/lib/utils';
+import { CodeXmlGradientIcon } from './icons/code-xml-gradient-icon';
 
 
 export function Header() {
@@ -45,7 +46,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full p-4">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between rounded-lg bg-card px-4 shadow-lg sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2">
-            <CodeXml className="h-6 w-6 text-primary" />
+            <CodeXmlGradientIcon className="h-6 w-6" />
             <span className="font-headline text-lg font-bold">
               {data.headerTitle}
             </span>
@@ -104,7 +105,7 @@ export function Header() {
                     className="flex items-center gap-2 text-lg font-semibold"
                     onClick={() => setIsMenuOpen(false)}
                     >
-                    <CodeXml className="h-6 w-6 text-primary" />
+                    <CodeXmlGradientIcon className="h-6 w-6" />
                     <span className="font-headline text-lg font-bold">{data.name}</span>
                     </Link>
                     {data.navLinks.map(({ href, label }) => (
