@@ -53,7 +53,7 @@ export const portfolioData = {
         {
           id: 'granor',
           title: 'Granor',
-          description: 'A personal finance management application that uses n8n and AI APIs with Telegram integration for transaction logging through bot interaction.',
+          description: 'Granor is an intelligent solution for personal financial control, combining workflow automation with n8n, integration with AI APIs, and communication via a Telegram Bot. With it, the user can register and manage transactions conveniently through chat interactions, while automation ensures data organization and intelligent expense categorization.',
           imageUrls: ['/granor1.jpg', '/granor2.jpg'],
           imageHint: 'personal finance management',
           tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
@@ -158,7 +158,7 @@ export const portfolioData = {
         {
           id: 'granor',
           title: 'Granor',
-          description: 'Uma aplicação de gestão de finanças pessoais que usa n8n e API de IAs com integração com telegram para registro de transações por interação com um bot.',
+          description: 'O Granor é uma solução inteligente para controle financeiro pessoal, que combina automação de fluxos com n8n, integração com APIs de IA e comunicação via Telegram Bot. Com ele, o usuário pode registrar e gerenciar transações de forma prática através de interações no chat, enquanto a automação garante organização dos dados e categorização inteligente das despesas.',
           imageUrls: ['/granor1.jpg', '/granor2.jpg'],
           imageHint: 'gestão finanças pessoais',
           tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
