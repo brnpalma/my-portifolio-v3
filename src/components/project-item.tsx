@@ -18,10 +18,6 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
   DialogClose,
   DialogPortal,
   DialogOverlay
@@ -101,25 +97,19 @@ export function ProjectItem({ project }: { project: Project }) {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogPortal>
           <DialogOverlay />
-          <DialogContent className="max-w-4xl p-0">
+          <DialogContent className="flex h-auto max-h-[90vh] w-auto max-w-[90vw] items-center justify-center border-none bg-transparent p-0 shadow-none">
             <Image
               src={selectedImage}
               alt={`Imagem ampliada do projeto`}
-              width={1200}
-              height={800}
-              className="h-auto w-full rounded-lg object-contain"
+              width={1600}
+              height={900}
+              className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
             />
-             <DialogHeader className="sr-only">
-              <DialogTitle>Imagem do Projeto</DialogTitle>
-              <DialogDescription>
-                Imagem ampliada do projeto.
-              </DialogDescription>
-            </DialogHeader>
+            <DialogClose className="absolute -top-2 -right-2 z-50 rounded-full bg-background/50 p-1 text-foreground opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </DialogClose>
           </DialogContent>
-          <DialogClose className="absolute right-4 top-4 z-[60] rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-            <X className="h-4 w-4 text-white bg-black rounded-sm" />
-            <span className="sr-only">Close</span>
-          </DialogClose>
         </DialogPortal>
       </Dialog>
     </div>
