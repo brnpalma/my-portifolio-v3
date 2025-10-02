@@ -22,7 +22,7 @@ export function ProjectItem({ project }: { project: Project }) {
 
   return (
     <div className="flex flex-col gap-8 md:flex-row">
-      <div className="relative h-60 w-full flex-shrink-0 md:w-1/2">
+      <div className="relative h-60 w-full flex-shrink-0 md:h-auto md:w-1/2">
         <Image
           src={project.imageUrl}
           alt={project.title}
