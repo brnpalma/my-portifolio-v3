@@ -20,7 +20,10 @@ import {
   DialogContent,
   DialogClose,
   DialogPortal,
-  DialogOverlay
+  DialogOverlay,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
 } from '@/components/ui/dialog';
 
 type Project = (typeof portfolioData.en.projects.items)[0];
@@ -98,6 +101,10 @@ export function ProjectItem({ project }: { project: Project }) {
         <DialogPortal>
           <DialogOverlay />
           <DialogContent className="flex h-auto max-h-[90vh] w-auto max-w-[90vw] items-center justify-center border-none bg-transparent p-0 shadow-none">
+          <DialogHeader className="sr-only">
+              <DialogTitle>Imagem do Projeto</DialogTitle>
+              <DialogDescription>Imagem ampliada do projeto {project.title}.</DialogDescription>
+            </DialogHeader>
             <Image
               src={selectedImage}
               alt={`Imagem ampliada do projeto`}
