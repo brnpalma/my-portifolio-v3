@@ -18,21 +18,21 @@ export function ExperienceSection() {
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
               <p className="mt-2 text-muted-foreground">{subtitle}</p>
             </div>
-            <div className="relative w-full max-w-5xl p-6 pt-8">
-              <div className="absolute left-4 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-border md:left-1/2 md:block"></div>
+            <div className="relative w-full max-w-5xl md:p-6 pt-8">
+              <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 transform bg-border md:block"></div>
               {jobs.map((job, index) => (
                 <div
                   key={job.company}
                   className={`relative mb-8 flex w-full items-center ${
-                    index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
+                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  <div className="absolute left-4 z-10 hidden -translate-x-1/2 transform rounded-full bg-gradient-to-r from-primary to-accent p-2 text-primary-foreground md:left-1/2 md:flex">
+                  <div className="absolute left-1/2 top-4 z-10 hidden -translate-x-1/2 transform rounded-full bg-gradient-to-r from-primary to-accent p-2 text-primary-foreground md:flex">
                     <job.icon className="h-5 w-5" />
                   </div>
                   <div
-                    className={`w-full pl-0 md:w-1/2 ${
-                      index % 2 === 0 ? 'md:pl-8 md:text-left' : 'md:pr-8 md:text-right'
+                    className={`w-full md:w-1/2 ${
+                      index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'
                     }`}
                   >
                     <Card className="text-left shadow-md">
