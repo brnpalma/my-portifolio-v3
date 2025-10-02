@@ -18,7 +18,6 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogClose,
   DialogPortal,
   DialogOverlay,
   DialogHeader,
@@ -112,10 +111,6 @@ export function ProjectItem({ project }: { project: Project }) {
               height={900}
               className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
             />
-            <DialogClose className="absolute -top-2 -right-2 z-50 rounded-full bg-background/50 p-1 text-foreground opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-              <X className="h-5 w-5" />
-              <span className="sr-only">Close</span>
-            </DialogClose>
           </DialogContent>
         </DialogPortal>
       </Dialog>
